@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+		<title>Task 1</title>
+		<meta name="author" content="Paddy and Kevin">
+		<meta name="description" content="A table">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--
+		<link href="favicon.png" rel="icon">
+		-->
+		<link href="libs/css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<nav>
+
+		</nav>
+		
+		<header>
+
+		</header>
+		
+		<main>
+			<table>
+				<thead>
+					<tr>
+						<th>API name</th>
+						<th>API description</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Earthquakes</td>
+						<td>
+								<a href="https://www.geonames.org/export/JSON-webservices.html#earthquakesJSON">API Description</a>
+								<div>
+									<p>Select country to use CountryInfo API to acquire bounding box parameters for Earthquakes API.</p>
+									<select id="selCountry1">
+										<option value="GB">Great Britain</option>
+										<option value="FR">France</option>
+										<option value="DE">Germany</option>
+										<option value="US">USA</option>
+									</select>
+									<p>Result : returns a list of earthquakes, ordered by magnitude (default size = 10 rows).</p>
+								</div>
+						</td>
+						<td><input id="btn1" type="submit" value="Submit"></td>
+					</tr>
+					<tr>
+						<td>Cities</td>
+						<td>
+								<a href="https://www.geonames.org/export/JSON-webservices.html#citiesJSON">API Description</a>
+								<div>
+										<p>Select country to use CountryInfo API to acquire bounding box parameters for Cities API.</p>
+										<select id="selCountry2">
+											<option value="GB">Great Britain</option>
+											<option value="FR">France</option>
+											<option value="DE">Germany</option>
+											<option value="US">USA</option>
+										</select>
+										<p>Result : returns a list of cities and placenames, ordered by relevancy (capital/population, default size = 10 rows).</p>
+									</div>
+						</td>
+						<td><input id="btn2" type="submit" value="Submit"></td>
+					</tr>
+					<tr>
+						<td>findNearbyWeather</td>
+						<td>
+							<a href="https://www.geonames.org/export/JSON-webservices.html#findNearByWeather">API Description</a>
+							<div>
+									<p>Select country to use CountryInfo API to acquire bounding box parameters for Cities API to acquire long and lat for findNearByWeather API.</p>
+									<select id="selCountry3">
+										<option value="GB">Great Britain</option>
+										<option value="FR">France</option>
+										<option value="DE">Germany</option>
+										<option value="US">USA</option>
+									</select>
+									<p>Result : weather station observations, to the first city in bounding box ordered by relevancy (capital/population).</p>
+									<p>Note : bounding boxes overlap, very simple first element implementation here e.g., selects Canadian capital for USA because of washington smaller population</p>
+								</div>
+						</td>
+						<td><input id="btn3" type="submit" value="Submit"></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr id="results">
+						<td id="test" colspan="3">RESULTS</td>
+					</tr>
+				</tfoot>
+		</table>
+
+		</main>
+
+		<div id="preloader"></div>
+
+		<script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+		<script type="application/javascript" src="libs/js/script1.js"></script>
+	</body>
+</html>
